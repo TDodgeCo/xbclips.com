@@ -18,3 +18,5 @@ const Route = use('Route')
 Route.on('/').render('home')
 
 Route.post('/clips', 'ClipController.index')
+
+Route.get('/test', 'TestController.index')
