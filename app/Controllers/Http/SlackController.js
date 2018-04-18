@@ -100,7 +100,7 @@ axios({
         'Content-Type': 'application/json'
       },
       data: {
-        'longUrl': 'https://xboxclips.com/clips/' + gTag + '/' + clip
+        'longUrl': 'https://xbclips.com/clips/' + gTag + '/' + clip
       }
     }).then( response =>  {
       var shortUrl = response.data.id
