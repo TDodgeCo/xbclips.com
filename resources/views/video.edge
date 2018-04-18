@@ -1,9 +1,12 @@
 @layout('layouts.main')
 
 @section('content')
-  @each(clip in clips)
-  <video src="{{ clip.gameClipUris[0].uri }}" controls width="400" poster="{{ clip.thumbnails[1].uri }}">
-    
+<div style="width: 80%; margin: 0 auto; text-align: center;">
+  <h3><span style="color: #0E7D14;">{{gTag}}</span></h3>
+  <p>Date Recorded: {{clip.dateRecorded}} | Duration: {{clip.durationInSeconds}} </p>
+  <video src="{{ clip.gameClipUris[0].uri }}" controls width="800" poster="{{ clip.thumbnails[1].uri }}">
   </video>
-  @endeach
+
+  <h3>{{clip.titleName}}</h3>
+</div>
 @endsection

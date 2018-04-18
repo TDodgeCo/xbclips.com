@@ -19,4 +19,6 @@ Route.on('/').render('home')
 
 Route.post('/clips', 'ClipController.index')
 
-Route.get('/test', 'TestController.index')
+Route.get('/clips/:gtag/:clipid', 'ClipController.store')
+
+Route.post('/slack', 'SlackController.index')
