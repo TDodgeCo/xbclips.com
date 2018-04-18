@@ -2,7 +2,7 @@
 
   @section('content')
   <div class="panel">
-    <h1 style="font-size: 6rem; width: 80%; margin: 0 auto; text-align: center;"><span class="xb360">XB</span>CLIPS<span style="font-size: 3rem;">.COM</span></h1>
+    <h1 id="siteTitle" style="font-size: 6rem; width: 80%; margin: 0 auto; text-align: center;"><span class="xb360">XB</span>CLIPS<span id="siteTitleCom" style="font-size: 3rem;">.COM</span></h1>
     <br>
     <h2 style="width: 80%; margin: 0 auto; text-align: center;">Sharing your recorded clips from <span class="xb360">XBOX</span> LIVE has never easier.</h2>
     <div style="text-align: center; margin-top: 50px;">
@@ -24,4 +24,11 @@
       </div>
     </div>
   </div>
+
+  <script type="text/javascript">
+    if (window.orientation !== 'undefined') {
+      document.getElementById('siteTitle').setAttribute('style', 'font-size: 3rem; width: 80%; margin: 0 auto; text-align: left;')
+      document.getElementById('siteTitleCom').setAttribute('style', 'font-size: 1.5rem;')
+    }
+  </script>
   @endsection
