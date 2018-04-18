@@ -100,7 +100,7 @@ axios({
         'Content-Type': 'application/json'
       },
       data: {
-        'longUrl': 'https://cd2eb20b.ngrok.io/clips/' + gTag + '/' + clip
+        'longUrl': '/clips/' + gTag + '/' + clip
       }
     }).then( response =>  {
       var shortUrl = response.data.id
