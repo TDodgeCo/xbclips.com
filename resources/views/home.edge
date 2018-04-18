@@ -1,0 +1,27 @@
+@layout('layouts.main')
+
+  @section('content')
+  <div class="panel">
+    <h1 style="font-size: 6rem; width: 80%; margin: 0 auto; text-align: center;"><span class="xb360">XB</span>CLIPS<span style="font-size: 3rem;">.COM</span></h1>
+    <br>
+    <h2 style="width: 80%; margin: 0 auto; text-align: center;">Sharing your recorded clips from <span class="xb360">XBOX</span> LIVE has never been so easy.</h2>
+    <div style="text-align: center; margin-top: 50px;">
+      <form class="" action="/clips" method="post">
+        <label for="gamertag">Gamertag: </label>
+        <input style="padding: 5px; font-size: 15px;" type="text" name="gamertag" placeholder="Your xbox live handle...">
+        {{ csrfField() }}
+        <button style="padding: 5px;" type="submit" name="submit">Find Clips</button>
+      </form>
+      <p style="font-size: 1.3rem; margin-top: 40px; color: #0e7d14 ;"><b>COMING SOON</b></p>
+      <p style="font-size: 1.3rem;">Tight integrations with the platforms that you love.</p>
+      <div style="width: 80%; margin: 25px auto;" class="icon-div">
+        <i style="margin-right: 1em;" class="fab fa-slack-hash fa-4x"></i>
+        <i style="margin-right: 1em;" class="fab fa-discord fa-4x"></i>
+        <i style="margin-right: 1em;" class="fab fa-facebook-f fa-4x"></i>
+        <i style="margin-right: .5em;" class="fab fa-youtube fa-4x"></i>
+        <i style="margin-left: .5em;" class="fab fa-instagram fa-4x"></i>
+        <i style="margin-left: 1em;" class="fab fa-twitter fa-4x"></i>
+      </div>
+    </div>
+  </div>
+  @endsection

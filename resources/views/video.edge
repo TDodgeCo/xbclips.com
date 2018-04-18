@@ -1,0 +1,9 @@
+@layout('layouts.main')
+
+@section('content')
+  @each(clip in clips)
+  <video src="{{ clip.gameClipUris[0].uri }}" controls width="400" poster="{{ clip.thumbnails[1].uri }}">
+    
+  </video>
+  @endeach
+@endsection
