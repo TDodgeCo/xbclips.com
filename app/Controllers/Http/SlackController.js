@@ -49,7 +49,7 @@ var gamertag = gTag.replace('%20', ' ')
 
 // tell slack that we've received the response, allowing us to send delayed responses
   var responseObj = {
-    'response_type': 'in_channel',
+    'response_type': 'ephemeral',
     'text': 'On it, ' +  gamertag + '.' + responseMessage
   }
 response.json(responseObj)
@@ -109,7 +109,7 @@ axios({
       // shorten URL and post that video clip to slack
       axios.post(response_url, {
         response_type: 'in_channel',
-        text: shortUrl + '\n This video will expire in 60 minutes.'
+        text: shortUrl
       }).then(function(response) {
         console.log('clip successfully sent')
       })

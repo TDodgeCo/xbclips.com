@@ -27,15 +27,50 @@ black: #080808;
    color: #0e7d14;
  }
 
+ #siteTitle {
+   font-size: 6em;
+   width: 80%;
+   margin: 0 auto;
+   text-align: center;
+ }
+
+ #siteTitleCom {
+   font-size: 3rem;
+ }
+
+ .tagline {
+   text-align: center;
+ }
+
+ .home {
+   text-align: center;
+   margin-top: 50px;
+ }
+
+ .icon-parent {
+   width: 80%;
+   margin: 25px auto;
+ }
+
  .icon-div {
    color: #2b2b2b;
    padding: 50px 0;
+   margin: 0 auto;
+ }
+ .mr-1 {
+   margin-right: 1em;
+ }
+
+ .coming-soon {
+   font-size: 1.3rem;
+   margin-top: 20px; 
+   color: #0e7d14;
  }
 
  .panel {
    width: 60%;
    margin: 0 auto;
-   margin-top: 100px;
+   margin-top: 60px;
    padding: 70px;
    background-color: rgba(19, 19, 19, .95);
  }
