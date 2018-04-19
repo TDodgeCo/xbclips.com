@@ -37,7 +37,8 @@ if (textArr[len -2] === '-') {
     textArr.pop()
   }
   gTag = textArr.join('').replace(' ', '%20')
-  responseMessage = ' Clip #' + (vidIndex + 1) + ' from your collection is coming up.';
+  responseMessage = ' Clip #' + (vidIndex + 1) + ' from your collection is coming up.'
+  + '\n To get a list of your available clips and their index, navigate to https://xbclips/' + dirtyText;
 }
 else {
   gTag = dirtyText.replace(' ', '%20')

@@ -47,6 +47,7 @@ class ClipController {
     })
   }
 
+  // store creates a route that dynamically pulls the gameClipUri based off the gameClipId
   async store ({ request, view }) {
       const url = request.url().split('/')
       var index = url.length

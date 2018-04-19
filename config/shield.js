@@ -134,7 +134,7 @@ module.exports = {
   csrf: {
     enable: true,
     methods: ['POST', 'PUT', 'DELETE'],
-    filterUris: ['/slack'],
+    filterUris: ['/slack', '/:gtag'],
     cookieOptions: {
       httpOnly: false,
       sameSite: true,
