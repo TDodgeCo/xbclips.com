@@ -109,7 +109,7 @@ axios({
       // shorten URL and post that video clip to slack
       axios.post(response_url, {
         response_type: 'in_channel',
-        text: shortUrl
+        text: shortUrl + ' - an xbox live clip'
       }).then(function(response) {
         console.log('clip successfully sent')
       })
