@@ -3,8 +3,12 @@
 @section('content')
 <div style="width: 80%; margin: 0 auto; text-align: center;">
   <h3><span style="color: #0E7D14;">{{gTag}}</span></h3>
-  <p>Date Recorded: {{clip.dateRecorded}} | Duration: {{clip.durationInSeconds}} </p>
-  <video style="max-width: 80%;" src="{{ clip.gameClipUris[0].uri }}" controls width="800" poster="{{ clip.thumbnails[1].uri }}">
+  <p>
+    Published: {{clip.dateRecorded}} | Duration: {{clip.durationInSeconds}} 
+  </p>
+  <video
+    preload="none" style="max-width: 80%;" src="{{ clip.gameClipUris[0].uri }}"
+    controls width="800" poster="{{ clip.thumbnails[1].uri }}">
   </video>
 
   <h3>{{clip.titleName}}</h3>

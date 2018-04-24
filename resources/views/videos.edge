@@ -1,21 +1,34 @@
 @layout('layouts.main')
 
 @section('content')
-<div style="width: 80%; margin: 0 auto; text-align: center;">
+<div id="scrolling-container" style="width: 80%; margin: 0 auto; text-align: center;">
   @each(clip in clips)
   <div style="display: inline-block; margin: 2rem 1rem;">
     <div style="width: 90%; margin: 0 auto;">
       <h3><span style="color: #0E7D14;">{{gTag}}</span> - Clip {{$loop.index + 1}}</h3>
-      <p>Date Recorded: {{clip.dateRecorded}} | Duration: {{clip.durationInSeconds}} </p>
-      <video style="max-width: 80%;" src="{{ clip.gameClipUris[0].uri }}" controls width="400" poster="{{ clip.thumbnails[1].uri }}">
-
+      <p>
+        Published: {{clip.dateRecorded}} | Duration: {{clip.durationInSeconds}}
+      </p>
+      <video
+        class="b-lazy" preload="none" style="max-width: 80%;"
+        src="{{ clip.gameClipUris[0].uri }}" controls width="400"
+        poster="{{ clip.thumbnails[0].uri }}">
       </video>
       <div class="">
-        <a style="display: inline-block;" href="/clips/{{gTag}}/{{clip.gameClipId}}"><button class="go-btn" type="button" name="button">Get Permalink</button> </a>
+        <a style="display: inline-block;" href="/clips/{{gTag}}/{{clip.gameClipId}}">
+          <button class="go-btn" type="button" name="button">Get Permalink</button>
+        </a>
         <h3>{{clip.titleName}}</h3>
       </div>
     </div>
   </div>
   @endeach
   </div>
+  <script type="text/javascript">
+    ;(function() {
+      v bLazy = new Blazy({
+        container: '#scrolling-container'
+      });
+    })();
+  </script>
 @endsection
