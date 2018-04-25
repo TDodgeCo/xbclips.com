@@ -9,10 +9,10 @@
       LIVE has never been easier.
     </h2>
     <div style="text-align: center; margin-top: 50px;">
-      <form class="" action="/clips" method="post">
-        <input style="padding: 15px; font-size: 15px; border-style: none;" type="text" name="gamertag" placeholder="Your xbox live handle...">
+      <form id="gTagForm" class="" action="/:gtag" method="post">
+        <input id="gTagInput" class="input-onload" type="text" name="gamertag" placeholder="Your xbox live handle...">
         {{ csrfField() }}
-        <button class="go-btn" type="submit" name="submit">Find Clips</button>
+        <button id="gTagSubmit" class="go-btn" type="submit" name="submit">Find Clips</button>
       </form>
       <p style="font-size: 1.3rem; margin-top: 25px;">Tight integrations with the platforms that you love.</p>
       <div class="icon-parent">
@@ -34,4 +34,5 @@
       </div>
     </div>
   </div>
+  {{ script('./js/form-methods.js') }}
   @endsection

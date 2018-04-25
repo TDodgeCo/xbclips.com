@@ -47,6 +47,19 @@ black: #080808;
    margin-top: 50px;
  }
 
+ /* Form Stuff */
+ .input-onload {
+   padding: 15px;
+   font-size: 15px;
+   border-style: none;
+ }
+ .error {
+   border-color: #red;
+   border-style: inset;
+   transition: .2s;
+ }
+
+
  .icon-parent {
    width: 80%;
    margin: 25px auto;

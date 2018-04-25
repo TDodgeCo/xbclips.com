@@ -4,9 +4,19 @@ const Env = use('Env')
 
 class GamertagController {
   async index({
-    params, view
+    params, request, view
   }) {
-    let gamertag = params.gtag
+
+    let gamertag;
+
+    if (params.gtag) {
+      gamertag = params.gtag
+    } else {
+      var req = request.only(['gamertag'])
+      gamertag = req.gamertag.replace(' ', '%20')
+    }
+
+
 
     var xuid = await axios({
       method: 'get',

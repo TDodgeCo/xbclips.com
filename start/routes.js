@@ -17,10 +17,10 @@ const Route = use('Route')
 
 Route.on('/').render('home')
 
-Route.post('/clips', 'ClipController.index')
+// Route.post('/:gtag', 'ClipController.index')
 
 Route.get('/clips/:gtag/:clipid', 'ClipController.store')
 
-Route.get('/:gtag', 'GamertagController.index')
+Route.route('/:gtag', 'GamertagController.index', ['GET', 'POST'])
 
 Route.post('/slack', 'SlackController.index')
