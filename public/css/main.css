@@ -54,7 +54,7 @@ black: #080808;
    border-style: none;
  }
  .error {
-   border-color: #red;
+   border-color: red;
    border-style: inset;
    transition: .2s;
  }
