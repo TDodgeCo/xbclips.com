@@ -5,30 +5,22 @@
   @each(clip in clips)
   <div style="display: inline-block; margin: 2rem 1rem;">
     <div style="width: 90%; margin: 0 auto;">
-      <h3><span style="color: #0E7D14;">{{gTag}}</span> - Clip {{$loop.index + 1}}</h3>
+      <h3><span class="xb360">{{gTag}}</span> - Clip {{$loop.index + 1}}</h3>
+      <h3>{{clip.titleName}}</h3>
       <p>
-        Published: {{clip.dateRecorded}} | Duration: {{clip.durationInSeconds}}
+        Published: {{clip.dateRecorded}} <br> Duration: {{clip.durationInSeconds}}
       </p>
-      <video
-        class="b-lazy" preload="none" style="max-width: 80%;"
-        src="{{ clip.gameClipUris[0].uri }}" controls width="400"
-        poster="{{ clip.thumbnails[0].uri }}">
-      </video>
+      <a href="/clips/{{ gTag }}/{{ clip.gameClipId }}">
+        <img class="b-lazy" style="max-width: 80%;" src="" data-src="{{ clip.thumbnails[0].uri }}" alt="a {{ clip.titleName }} clip recorded by {{ gTag }}">
+      </a>
       <div class="">
         <a style="display: inline-block;" href="/clips/{{gTag}}/{{clip.gameClipId}}">
           <button class="go-btn" type="button" name="button">Get Permalink</button>
         </a>
-        <h3>{{clip.titleName}}</h3>
       </div>
     </div>
   </div>
   @endeach
   </div>
-  <script type="text/javascript">
-    ;(function() {
-      v bLazy = new Blazy({
-        container: '#scrolling-container'
-      });
-    })();
-  </script>
+  @include('partials.videos-js')
 @endsection

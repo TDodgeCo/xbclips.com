@@ -27,6 +27,11 @@ black: #080808;
    color: #0e7d14;
  }
 
+ .xb360-white {
+   font-family: 'xbox360';
+   color: #e9e9e9;
+ }
+
  #siteTitle {
    font-size: 6em;
    width: 80%;
@@ -59,7 +64,7 @@ black: #080808;
    transition: .2s;
  }
 
-
+ /* End Form Stuff */
  .icon-parent {
    width: 80%;
    margin: 25px auto;
@@ -96,3 +101,7 @@ black: #080808;
    text-transform: uppercase;
    border-style: none;
  }
+
+
+ /* Videos page */
+ 
