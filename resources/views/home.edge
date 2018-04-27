@@ -1,5 +1,7 @@
 @layout('layouts.main')
-
+  @section('head')
+    @include('partials.fontawesome')
+  @endsection
   @section('content')
   <div class="panel">
     <h1 class="site-title"><span class="xb360">XB</span>CLIPS<span class="site-title-com">.COM</span></h1>
@@ -25,11 +27,9 @@
 
       <div class="icon-parent">
         <div class="icon-div">
-          <i class="fab fa-reddit fa-4x mr-1"></i>
-          <i class="fab fa-facebook-f fa-4x mr-1"></i>
-          <i class="fab fa-youtube fa-4x mr-1"></i>
-          <i class="fab fa-instagram fa-4x mr-1"></i>
-          <i class="fab fa-twitter fa-4x"></i>
+          <i class="fab fa-reddit fa-4x mr-1 icon-mobile"></i>
+          <i class="fab fa-youtube fa-4x mr-1 icon-mobile"></i>
+          <i class="fab fa-twitter fa-4x icon-mobile"></i>
         </div>
       </div>
     </div>
