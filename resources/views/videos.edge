@@ -1,23 +1,23 @@
 @layout('layouts.main')
 
 @section('content')
-<div id="scrolling-container" style="width: 80%; margin: 0 auto; text-align: center;">
+<div id="scrolling-container" class="wrap vid-wrap">
   @each(clip in clips)
-  <div style="display: inline-block; margin: 2rem 1rem;">
-    <div style="width: 90%; margin: 0 auto;">
-      <h3><span class="xb360">{{gTag}}</span> - Clip {{$loop.index + 1}}</h3>
-      <h3>{{clip.titleName}}</h3>
+  <div class="vid-container">
+    <div class="vid-container-child">
+      <div class="vid-container-title">
+        <h3><span class="xb360">{{gTag}}</span> - Clip {{$loop.index + 1}}</h3>
+        <h3>{{clip.titleName}}</h3>
+      </div>
       <p>
-        Published: {{clip.dateRecorded}} <br> Duration: {{clip.durationInSeconds}}
+        Published: {{clip.dateRecorded}} | Duration: {{clip.durationInSeconds}} seconds
       </p>
       <a href="/clips/{{ gTag }}/{{ clip.gameClipId }}">
-        <img class="b-lazy" style="max-width: 80%;" src="" data-src="{{ clip.thumbnails[0].uri }}" alt="a {{ clip.titleName }} clip recorded by {{ gTag }}">
+        <img class="b-lazy vid-img" src="" data-src="{{ clip.thumbnails[0].uri }}" alt="a {{ clip.titleName }} clip recorded by {{ gTag }}">
       </a>
-      <div class="">
-        <a style="display: inline-block;" href="/clips/{{gTag}}/{{clip.gameClipId}}">
-          <button class="go-btn" type="button" name="button">Get Permalink</button>
-        </a>
-      </div>
+      <a style="display: inline-block;" href="/clips/{{gTag}}/{{clip.gameClipId}}">
+        <button class="go-btn vid-go-btn" type="button" name="button">Get Permalink</button>
+      </a>
     </div>
   </div>
   @endeach

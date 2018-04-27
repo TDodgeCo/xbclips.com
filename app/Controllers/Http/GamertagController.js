@@ -24,6 +24,8 @@ class GamertagController {
       headers: {
         'X-AUTH': Env.get('X-AUTH')
       }
+    }).catch( error => {
+      console.log(error)
     })
     xuid = xuid.data.xuid
     console.log(xuid)
@@ -34,6 +36,8 @@ class GamertagController {
       headers: {
         'X-AUTH': Env.get('X-AUTH')
       }
+    }).catch( error => {
+      console.log(error)
     })
     gTag = gTag.data.gamertag
     console.log(gTag)
@@ -44,6 +48,8 @@ class GamertagController {
       headers: {
         'X-AUTH': Env.get('X-AUTH')
       }
+    }).catch( error => {
+      console.log(error)
     })
 
     var clips = res.data
