@@ -36,16 +36,50 @@ black: #080808;
    color: #e9e9e9;
  }
 
- #siteTitle {
+ .panel {
+   width: 60%;
+   margin: 0 auto;
+   margin-top: 40px;
+   padding: 40px;
+   background-color: rgba(19, 19, 19, .95);
+ }
+
+ @media only screen and (max-width: 768px) {
+   /* For mobile phones */
+   [class*="panel"] {
+     width: 90%;
+     padding: 10px;
+   }
+ }
+
+ .site-title {
    font-size: 6em;
    width: 80%;
    margin: 0 auto;
    text-align: center;
  }
 
- #siteTitleCom {
+ .site-title-com {
    font-size: 3rem;
  }
+
+ @media only screen and (max-width: 768px) {
+      /* For mobile phones: */
+      [class*="site-title"] {
+        font-size: 48px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+      }
+  }
+  @media only screen and (max-width: 768px) {
+       /* For mobile phones: */
+       [class*="site-title-com"] {
+         font-size: 28px;
+       }
+   }
+
+
 
  .tagline {
    text-align: center;
@@ -87,14 +121,6 @@ black: #080808;
    font-size: 1.3rem;
    margin-top: 20px;
    color: #0e7d14;
- }
-
- .panel {
-   width: 60%;
-   margin: 0 auto;
-   margin-top: 40px;
-   padding: 40px;
-   background-color: rgba(19, 19, 19, .95);
  }
 
  .go-btn {
