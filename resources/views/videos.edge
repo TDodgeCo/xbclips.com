@@ -1,26 +1,26 @@
 @layout('layouts.main')
 
 @section('content')
-<div id="scrolling-container" class="wrap vid-wrap">
-  @each(clip in clips)
-  <div class="vid-container">
-    <div class="vid-container-child">
-      <div class="vid-container-title">
-        <h3><span class="xb360">{{gTag}}</span> - Clip {{$loop.index + 1}}</h3>
-        <h3>{{clip.titleName}}</h3>
+  <div id="scrolling-container" class="wrap vid-wrap">
+    @each(clip in clips)
+    <div class="vid-container">
+      <div class="vid-container-child">
+        <div class="vid-container-title">
+          <h3><span class="xb360">{{gTag}}</span> - Clip {{$loop.index + 1}}</h3>
+          <h3>{{clip.titleName}}</h3>
+        </div>
+        <p>
+          Published: {{clip.dateRecorded}} | Duration: {{clip.durationInSeconds}} seconds
+        </p>
+        <a href="/clips/{{ gTag }}/{{ clip.gameClipId }}">
+          <img class="b-lazy vid-img" src="" data-src="{{ clip.thumbnails[0].uri }}" alt="a {{ clip.titleName }} clip recorded by {{ gTag }}">
+        </a>
+        <a style="display: inline-block;" href="/clips/{{gTag}}/{{clip.gameClipId}}">
+          <button class="go-btn vid-go-btn" type="button" name="button">Get Permalink</button>
+        </a>
       </div>
-      <p>
-        Published: {{clip.dateRecorded}} | Duration: {{clip.durationInSeconds}} seconds
-      </p>
-      <a href="/clips/{{ gTag }}/{{ clip.gameClipId }}">
-        <img class="b-lazy vid-img" src="" data-src="{{ clip.thumbnails[0].uri }}" alt="a {{ clip.titleName }} clip recorded by {{ gTag }}">
-      </a>
-      <a style="display: inline-block;" href="/clips/{{gTag}}/{{clip.gameClipId}}">
-        <button class="go-btn vid-go-btn" type="button" name="button">Get Permalink</button>
-      </a>
     </div>
-  </div>
-  @endeach
+    @endeach
   </div>
   @include('partials.videos-js')
 @endsection

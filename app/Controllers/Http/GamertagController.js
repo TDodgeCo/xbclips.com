@@ -16,8 +16,6 @@ class GamertagController {
       gamertag = req.gamertag.replace(' ', '%20')
     }
 
-
-
     var xuid = await axios({
       method: 'get',
       url: 'https://xboxapi.com/v2/xuid/' + gamertag,

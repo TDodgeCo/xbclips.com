@@ -24,3 +24,5 @@ Route.get('/clips/:gtag/:clipid', 'ClipController.store')
 Route.route('/:gtag', 'GamertagController.index', ['GET', 'POST'])
 
 Route.post('/slack', 'SlackController.index')
+
+Route.route('/test/test', 'TestController.index', ['GET', 'POST'])
