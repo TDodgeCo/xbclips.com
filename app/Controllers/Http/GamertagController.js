@@ -17,7 +17,7 @@ class GamertagController {
     }
 
 
-
+    
     var xuid = await axios({
       method: 'get',
       url: 'https://xboxapi.com/v2/xuid/' + gamertag,
